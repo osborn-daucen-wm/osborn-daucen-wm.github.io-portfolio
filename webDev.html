@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Daucen Osborn - Web Development</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/logoIcon.png">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/kwicks-slider.css" type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.kwicks-1.5.1.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/touchTouch.jquery.js"></script>
+    <script>
+        if ($(window).width() > 1024) {
+            document.write("<" + "script src='js/jquery.preloader.js'></" + "script>");
+        }
+    </script>
+    <script>
+        jQuery(window).load(function() {
+            $x = $(window).width();
+            if ($x > 1024) {
+                jQuery("#content .row").preloader();
+            }
+            jQuery('.magnifier').touchTouch();
+            jQuery('.spinner').animate({
+                'opacity': 0
+            }, 1000, 'easeOutCubic', function() {
+                jQuery(this).css('display', 'none')
+            });
+        });
+    </script>
+    <!--[if lt IE 8]>
+<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>
+<![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+<![endif]-->
+</head>
+
+<body>
+    <div class="spinner"></div>
+    <!-- header start -->
+    <header>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar navbar_">
+                        <div class="container">
+                            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/logo.png"> </a></h1>
+                            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+                            <div class="nav-collapse nav-collapse_  collapse">
+                                <ul class="nav sf-menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active sub-menu"><a>Work</a>
+                                        <ul>
+                                            <li><a href="webDev.html">Web Design</a></li>
+                                            <li><a href="graphDev.html">Graphic Design</a></li>
+                                            <li><a href="printing.html">Printing</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="blog.html">Blog</a></li>
+                <li class="sub-menu"><a href="process.html">Process</a>
+                  <ul>
+                    <li><a href="#">Process 01</a></li>
+                    <li><a href="#">Process 02</a></li>
+                    <li><a href="#">Process 03</a></li>
+                  </ul>
+                </li> -->
+                                    <li>
+                                        <a href="about.html">About Me</a>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bg-content">
+
+
+
+
+        <!-- content -->
+        <!-- <div id="content" class="content-extra">
+    <div class="ic"></div>
+    <div class="row-1">
+      <div class="container">
+        <div class="row">
+          <article class="span12">
+            <h4>My Recent Work</h4>
+          </article>
+          <div class="clear"></div>
+          <ul class="portfolio clearfix">
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/1.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/2.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/3.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/4.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/5.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/6.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/7.jpg"></a></li>
+            <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/work/8.jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row-2">
+      <!-- <div class="container">
+        <h3>Completly Customizable and Responsive</h3>
+        <h3>Easy to Use. Totally Free to Download. Made with love!</h3>
+        <p>The complete template is created using the Bootstrap framework, which is highly customizable with lots of options.</p>
+        <a href="#" class="btn btn-1">Download</a> </div>
+    </div> -->
+
+
+
+        <div class="row-1">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        <h4>My Languages</h4>
+                    </article>
+                    <div class="thumbnail thumbnail-1 span3">
+                        <h3>HTML</h3>
+                        <img style="height: 11em" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="HTML Pic">
+                        <section>
+                            <div class="meta">
+                                <div class="clear"></div>
+                                <p>HTML is the basic layout of a web page. It is essential to moving forward when working in both the front and back end. It was my first language to learn and allows me to create basic, static websites.</p>
+                        </section>
+                        </div>
+
+                        <div class="thumbnail thumbnail-1 span3">
+                            <h3>CSS</h3>
+                            <img style="height: 11em" src="http://www.codingdojo.com/blog/wp-content/uploads/css.jpg" alt="CSS Pic">
+                            <section>
+                                <div class="meta">
+                                    <div class="clear"></div>
+                                    <p>CSS is essentially what makes a website look good. It is the styles that goes hand-in hand with your HTML. CSS was the second lenguage I learned. Currently, I am trying to expand by working into SASS.</p>
+                            </section>
+                            </div>
+
+                            <div class="thumbnail thumbnail-1 span3">
+                                <h3>JavaScript</h3>
+                                <img style="height: 11em" src="https://www.codementor.io/assets/page_img/learn-javascript.png" alt="">
+                                <section>
+                                    <div class="meta">
+                                        <div class="clear"></div>
+                                        <p>JavaScript, not to be confused with Java, is the intelligence that is built into a website. It allows for something a little more dynamic as well as interactive. The uses for JavaScript are literally endless.</p>
+                                </section>
+                                </div>
+
+                                <div class="clear"></div>
+                                </br>
+                                </br>
+                                </br>
+
+                                <div class="thumbnail thumbnail-1 span3">
+                                    <h3>SQL</h3>
+                                    <img style="height: 11em" src="http://www.mikefal.net/wp-content/uploads/2016/05/logoAzureSql.png" alt="">
+                                    <section>
+                                        <div class="meta">
+                                            <div class="clear"></div>
+                                            <p>SQL is efficient for working with databases. This is part of the server-side of programming that pays significantly more. I have personally used it within my work on PHP; creating relational SQL databases.</p>
+                                    </section>
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="thumbnail thumbnail-1 span3">
+                                            <h3>PHP</h3>
+                                            <img style="height: 11em" src="https://newrelic.com/assets/pages/apm/php/php-elephant-logo-bd4f9d83be8c8563248fe4793f90bae7.png" alt="">
+                                            <section>
+                                                <div class="meta">
+                                                    <div class="clear"></div>
+                                                    <p>PHP is the first truly back-end language. It is interweavable with HTML which allows for a lot less of a learning curve and is a key part when learning the LAMP stack. (the "P" is for PHP)</p>
+                                            </section>
+                                            </div>
+
+                                            <div class="thumbnail thumbnail-1 span3">
+                                                <h3>NodeJS</h3>
+                                                <img style="height: 11em" src="https://static.sinap.ps/blog/2014/Dec/nodejs_logo-1417834491072.png" alt="">
+                                                <section>
+                                                    <div class="meta">
+                                                        <div class="clear"></div>
+                                                        <p>NodeJS is the back-end component that is key to the MEAN stack. It uses the same basic JavaScript syntax to run back-end functionality to a website. Specifically, it often helps connect to a database
+                                                            like MongoDB.</p>
+                                                </section>
+                                                </div>
+                                            </div>
+
+                                            <div class="clear"></div>
+                                            </br>
+                                            </br>
+                                            </br>
+
+                                            <div class="container">
+                                            <div class="row">
+                                                <div class="thumbnail thumbnail-1 span3">
+                                                    <h3>Java</h3>
+                                                    <img style="height: 11em" src="https://cdn.vox-cdn.com/thumbor/FDD76YJZJFPyNUfT3ZBHcnMA0Ec=/43x0:593x367/1200x800/filters:focal(43x0:593x367)/cdn.vox-cdn.com/uploads/chorus_image/image/48667835/dbgxt2rvpd26udoyzcqn.0.0.jpg" alt="">
+                                                    <section>
+                                                        <div class="meta">
+                                                            <p>My first encounter with Java was at my trade-school, West-MEC. But, I began gaining a deeper understanding of the language and how it worked in my Freshman year of college at ASU. Since then, I have grown fond of the language and even managed to get a job grading coding assignments and tutoring students in the class for an Intro to Programming class, CSE 110.</p>
+                                                    </section>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <button type="button" class="btn-lg btn-primary gradient round" href="https://github.com/osborn-daucen-wm">Check Out My GitHub Page!</button> -->
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+                                            <article class="span12">
+                                                <h4>Team Experience</h4>
+                                            </article>
+                                            <div class="thumbnail thumbnail-1 span3">
+                                                <h3>Codeday</h3>
+                                                <img style="height: 11em" src="img/6-Presentations-IMG_8474.jpg" alt="">
+                                                <section>
+                                                    <div class="meta">
+                                                        <div class="clear"></div>
+                                                        <p>My team of four was able to win "Best Application" at February 2016's CodeDay. We made a website essential for giving rewards to small businesses.</p>
+                                                </section>
+                                                </div>
+                                            </div>
+
+                                            <!-- <button type="button" class="btn-lg btn-primary gradient round" href="https://github.com/osborn-daucen-wm">Check Out My GitHub Page!</button> -->
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div id="gitBtn">
+                                            <a href="https://github.com/osborn-daucen-wm" class="gitBtnAct">
+                                                <p id="gitText">
+                                                    Click Here To Check Out My GitHub!
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <article class="span6">
+                                                <h3>About Me</h3>
+                                                <div class="wrapper">
+                                                    <figure class="img-indent span2"><img src="img/blog-featured-04.jpg " alt=""></figure>
+                                                    <div class="inner-1 overflow extra">
+                                                        <div class="txt-1">I am a person with an extremely complicated background. I pride myself with the knowledge of many different trades but especially enjoy coding.</div>
+                                                        Currently, I am trying to expand my skills from the basic front end languages of HTML and CSS to the back-end. I have taking a liking to the MEAN stack where I will enhance my skills to become an expert in JavaScript.
+                                                        </br>
+                                                        </br>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="span6">
+                                                <h3>Some quick links</h3>
+                                                <div class="wrapper">
+                                                    <ul class="list">
+                                                        <li><a href="webDev.html">Web Development</a></li>
+                                                        <li><a href="#">Graphic Design</a></li>
+                                                        <li><a href="#">Photography</a></li>
+                                                        <li><a href="#">Printing</a></li>
+                                                        <!-- <li><a href="#">Portraits</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Fine Art</a></li> -->
+                                                    </ul>
+                                                    <ul class="list list-pad">
+                                                        <!-- <li><a href="#">Photography</a></li> -->
+                                                        <!-- <li><a href="#">Portraits</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Fine Art</a></li> -->
+                                                    </ul>
+                                                    <ul class="list list-pad">
+                                                        <!-- <li><a href="#">Printing</a></li> -->
+                                                        <!-- <li><a href="#">Portraits</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Fine Art</a></li> -->
+                                                    </ul>
+                                                    <ul class="list">
+                                                        <!-- <li><a href="#">Graphic Design</a></li> -->
+                                                        <!-- <li><a href="#">Lifestyle</a></li>
+              <li><a href="#">Love story</a></li>
+              <li><a href="#">Landscapes</a></li> -->
+                                                    </ul>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer -->
+                            <footer>
+                                <div class="container clearfix">
+                                    <ul class="list-social pull-right">
+                                        <li>
+                                            <a class="icon-1" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-2" href="https://github.com/osborn-daucen-wm"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-3" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-4" href="#"></a>
+                                        </li>
+                                    </ul>
+                                    <div class="privacy pull-left">&copy; 2017 | <a href="index.html">Daucen Osborn</a> | </a>
+                                    </div>
+                                </div>
+                            </footer>
+                            <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
